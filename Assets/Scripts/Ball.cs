@@ -7,6 +7,7 @@ public class Ball : Button3D
     public enum  State { top, bottom };
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private State state = State.bottom;
+    [SerializeField] private Outline outline;
     public State StateBall => state;
     public BallProperty BallProperty { get; private set; }
     public bool IsPainted;
@@ -19,5 +20,13 @@ public class Ball : Button3D
     public void SetState(State state)
     {
         this.state = state;
+        if(state == State.top)
+        {
+            outline.enabled = true;
+        }
+        else
+        {
+            outline.enabled = false;
+        }
     }
 }

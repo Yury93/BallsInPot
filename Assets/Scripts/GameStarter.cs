@@ -10,6 +10,7 @@ public class GameStarter : MonoBehaviour
     [SerializeField] private List<Pot> pots;
     [SerializeField] private Transform contentPot;
     [SerializeField] private List<BallProperty> ballProperties;//их количество должно быть одинаково с количеством pots
+    [SerializeField] private FlyTextCreator textCreator;
     public Pot potPrefab;
     public int countPot;
     public PotProperty potProperty;
@@ -18,13 +19,19 @@ public class GameStarter : MonoBehaviour
     //после того как определённый цвет превысил лимит одного из пота удалять из списка проперти и назначать опять рандом
     void Start()
     {
+        textCreator.Init();
         clickRegister.Init();
         PotCreator potCreator = new PotCreator(potPrefab, countPot, contentPot);
 
         pots = potCreator.CreateListPot(potProperty, interval);
 
-     
+        SetupBallColors();
+        gameSystem.Init(pots);
+        Debug.Log("Start game");
+    }
 
+    private void SetupBallColors()
+    {
         while (ballProperties.Count != 0)
         {
             foreach (var pot in pots)
@@ -34,7 +41,7 @@ public class GameStarter : MonoBehaviour
                 var propertyRnd = ballProperties[index];
                 var ballsSameColor = GetBallsSameColor(propertyRnd);
 
-                if (pot.Property.LimitBalls-1 == ballsSameColor.Count)
+                if (pot.Property.CountBalls == ballsSameColor.Count)
                 {
                     ballProperties.Remove(propertyRnd);
 
@@ -42,14 +49,12 @@ public class GameStarter : MonoBehaviour
                 else
                 {
                     var ballInit = pot.Balls.FirstOrDefault(b => b.IsPainted == false);
-                    if(ballInit)
-                    ballInit.Init(propertyRnd);
+                    if (ballInit)
+                        ballInit.Init(propertyRnd);
                 }
-            
+
             }
         }
-         gameSystem.Init(pots);
-        Debug.Log("Start game");
     }
 
     private List<Ball> GetBallsSameColor(BallProperty propertyRnd)

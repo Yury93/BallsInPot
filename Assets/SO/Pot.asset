@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pot
   m_EditorClassIdentifier: 
   countBalls: 3
-  limitBalls: 4
+  limitBalls: 5

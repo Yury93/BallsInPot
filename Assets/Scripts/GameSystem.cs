@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
+    [SerializeField] private LevelCondition levelCondition;
     private List<Ball> balls;
     public List<Pot> Pots { get; private set; }
 
@@ -17,6 +18,7 @@ public class GameSystem : MonoBehaviour
     {
         balls = new List<Ball>();
         Pots = pots;
+        levelCondition.Init(pots);
         foreach (var pot in Pots)
         {
             balls.AddRange(pot.Balls);
@@ -35,20 +37,29 @@ public class GameSystem : MonoBehaviour
         {
             //шарик отправляется в эту же колбу
             ReturnBallInPot(selectePot);
+            ShowOutlinePots(false);
         }
         else if(ballTop)
         {
             //шарик сначала становится на точку к новому овнеру, а потом заполняет новую пустую точку этого овнера
-            var ownerPot = Pots.First(p => p.Balls.Any(b => b == ballTop));
-            ownerPot.Balls.Remove(ballTop);
-            if (moveCoroutine == null)
-                moveCoroutine = StartCoroutine(CorMoveToPoints(ballTop, selectePot));
+            if (selectePot.Property.LimitBalls > selectePot.Balls.Count)
+            {
+                var ownerPot = Pots.First(p => p.Balls.Any(b => b == ballTop));
+                ownerPot.Balls.Remove(ballTop);
+                if (moveCoroutine == null)
+                    moveCoroutine = StartCoroutine(CorMoveToPoints(ballTop, selectePot));
+                ShowOutlinePots(false);
+            }
+            else
+            {
+                FlyTextCreator.Instance.CreateText(selectePot.transform, "Эта колба заполнена", 2);
+            }
         }
         else
         {
             //шарик поднимается вверх 
             if (selectePot.Balls.Count == 0) return;
-
+            ShowOutlinePots(true);
             ballTop = selectePot.Balls.Last();
             ballTop.SetState(Ball.State.top);
             if(moveCoroutine == null)
@@ -68,6 +79,7 @@ public class GameSystem : MonoBehaviour
         if (ball)
         {
             //шарик отправляется в эту же колбу
+            ShowOutlinePots(false);
             ReturnBallInPot(pot);
         }
     }
@@ -80,6 +92,18 @@ public class GameSystem : MonoBehaviour
 
         ballTop.SetState(Ball.State.bottom);
         ballTop = null;
+
+        ShowOutlinePots(false);
+    }
+
+    private void ShowOutlinePots(bool result)
+    {
+        foreach (var pot in Pots)
+        {
+            pot.Outline.enabled = result;
+            
+        }
+   
     }
 
     IEnumerator CorMoveToPoint(Ball ball, Vector3 newPosition)
@@ -87,7 +111,7 @@ public class GameSystem : MonoBehaviour
         isProcessCoroutine = true;
         while(ball.transform.position != newPosition)
         {
-            ball.transform.position = Vector3.MoveTowards(ball.transform.position, newPosition,0.3f);
+            ball.transform.position = Vector3.MoveTowards(ball.transform.position, newPosition,0.09f);
             yield return null;
         }
         isProcessCoroutine = false;
@@ -96,6 +120,7 @@ public class GameSystem : MonoBehaviour
     IEnumerator CorMoveToPoints(Ball ball, Pot potNewOwner)
     {
         isProcessCoroutine = true;
+        ball.SetState(Ball.State.bottom);
         while (ball.transform.position != potNewOwner.Top.position)
         {
             ball.transform.position = Vector3.MoveTowards(ball.transform.position, potNewOwner.Top.position, 0.1f);
@@ -112,12 +137,13 @@ public class GameSystem : MonoBehaviour
 
         while (ball.transform.position != newPosition)
         {
-            ball.transform.position = Vector3.MoveTowards(ball.transform.position, newPosition, 0.1f);
+            ball.transform.position = Vector3.MoveTowards(ball.transform.position, newPosition, 0.09f);
             yield return null;
         }
         ball.transform.SetParent(potNewOwner.Bottom);
-        ball.SetState(Ball.State.bottom);
+       
         ballTop = null;
+        levelCondition.SetupResult();
         isProcessCoroutine = false;
         moveCoroutine = null;
     }

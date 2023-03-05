@@ -8,6 +8,8 @@ public class Pot : Button3D
     [SerializeField] private PotProperty property;
     [SerializeField] private List<Ball> balls;
     [SerializeField] private Transform bottom,top;
+    [SerializeField] private Outline outline;
+    public Outline Outline => outline;
     public BallCreator BallCreator { get; private set; }
     public Transform Top => top;
     public Transform Bottom => bottom;

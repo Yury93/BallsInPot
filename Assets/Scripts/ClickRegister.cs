@@ -3,12 +3,12 @@ using UnityEngine;
 public class ClickRegister : MonoBehaviour
 {
     [SerializeField] private LayerMask clickMask;
-    private Camera camera;
+    [SerializeField]private Camera camera;
     
 
     public void Init()
     {
-        camera = Camera.main;
+
     }
 
     private void Update()
