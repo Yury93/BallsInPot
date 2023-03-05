@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeMode: 1
-  timer: 60
+  timer: 120
   timerText: {fileID: 1871524887}
   timerPanel: {fileID: 1931127204}
   panelResult: {fileID: 1980094727}
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   globalSkybox: {fileID: 11400000, guid: b3eebe2119c14cc4b8a4a13f4b74b157, type: 2}
   potPrefab: {fileID: 8082758956039869891, guid: 5c55c27b201091747a2debf5e9a8ec1c, type: 3}
   countPot: 4
-  potProperty: {fileID: 11400000, guid: 4d09139f129d79942a506a850806ad5d, type: 2}
+  potProperty: {fileID: 11400000, guid: 86649df41f9900f4ea101c6f34765666, type: 2}
   interval: 3
 --- !u!4 &403203855
 Transform:

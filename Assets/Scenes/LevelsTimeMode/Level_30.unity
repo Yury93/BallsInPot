@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeMode: 1
-  timer: 60
+  timer: 70
   timerText: {fileID: 1871524887}
   timerPanel: {fileID: 1931127204}
   panelResult: {fileID: 1980094727}
@@ -1073,12 +1073,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7c462a08936d80144b06cb9df1c9929b, type: 2}
   - {fileID: 11400000, guid: a1ca48d64b83a5042a1247e459543d5d, type: 2}
   - {fileID: 11400000, guid: 7560df12dfdaccb419428092136bf89d, type: 2}
+  - {fileID: 11400000, guid: 128c38967abfb62408c069be032416a7, type: 2}
+  - {fileID: 11400000, guid: 63fd80a5127e31c4796b94b818b3f6b3, type: 2}
   textCreator: {fileID: 403203856}
   globalSkybox: {fileID: 11400000, guid: b3eebe2119c14cc4b8a4a13f4b74b157, type: 2}
   potPrefab: {fileID: 8082758956039869891, guid: 5c55c27b201091747a2debf5e9a8ec1c, type: 3}
-  countPot: 4
-  potProperty: {fileID: 11400000, guid: 4d09139f129d79942a506a850806ad5d, type: 2}
-  interval: 3
+  countPot: 6
+  potProperty: {fileID: 11400000, guid: a6af43adc0a4d3e48be2cb449384028e, type: 2}
+  interval: 2.72
 --- !u!4 &403203855
 Transform:
   m_ObjectHideFlags: 0
@@ -2302,7 +2304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238837109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.39, y: 0, z: 0}
+  m_LocalPosition: {x: -6.72, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3eb62d892cddcd41835bfd8afeb140b, type: 3}
-  m_Name: Ball 4
+  m_Script: {fileID: 11500000, guid: 27bf4927f1258c545a9f42718f7097ad, type: 3}
+  m_Name: PotLevel5
   m_EditorClassIdentifier: 
-  color: {r: 0.040711403, g: 1, b: 0, a: 0}
+  countBalls: 4
+  limitBalls: 7

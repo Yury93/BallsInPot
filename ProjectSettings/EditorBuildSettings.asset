@@ -12,6 +12,96 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelsTimeMode/Level_1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_2.unity
+    guid: b1295aa8a7d5baf418136eeea77cf9d3
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_3.unity
+    guid: 3df9cb5cbee59754db53ff37dc40369a
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_4 1.unity
+    guid: c1ff9f90ed6d81c4db5f9f93d69dac95
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_4.unity
+    guid: d30fd6962377bac43aaf3273740f6bdf
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_5.unity
+    guid: 0fdb83701d0da6f43af15bedda190fc0
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_6.unity
+    guid: d83c52d6329c2f2439f818817e6f6f62
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_7.unity
+    guid: 56c4f513f63dcdf44b1f4edf62dae729
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_8.unity
+    guid: 89d36e72d208c894f94258ece6a4a1bf
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_9.unity
+    guid: 464a2feba56668b47b0e04975f6f3d27
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_10.unity
+    guid: 6f1f2d9ae56dcba4e8212be7030e9265
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_11.unity
+    guid: 565786c6ffe1f2a439ce6475bf1ebc5d
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_12.unity
+    guid: 306c4f0160aa716488895101c9874694
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_13.unity
+    guid: 88251cea909f0894089f64572ac92388
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_14.unity
+    guid: 3128d0cf49399ac49bc35789feef0c93
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_15.unity
+    guid: 79542f1a17ba97140b96a402f357bce8
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_16.unity
+    guid: 690dce3d3fa27184ca992e73ee1f0896
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_17.unity
+    guid: 33b32b04fc42b81429f7d92caf6847b4
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_18.unity
+    guid: 11743e000f38e024a8071dec90b2108a
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_19.unity
+    guid: 085390ae0da12d846a6bd46bea8d570e
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_20.unity
+    guid: f3ef9f77ab8797d4fa63d4e00e704411
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_21.unity
+    guid: 902b3d933de02d94486842bb439fc25e
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_22.unity
+    guid: 8e79a33387063514fa5ccc4f87fe03c2
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_23.unity
+    guid: ecd37fe765b461b4cb26e42195f31553
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_24.unity
+    guid: d7be3b66578cae84c84f72d0aef2510a
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_25.unity
+    guid: 4fc894687571c1c4994e0c79d3d56d4d
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_26.unity
+    guid: ec708c503aed2e34a982d3c34e58999f
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_27.unity
+    guid: b5d545541b3f9e64982b830ac28d1453
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_28.unity
+    guid: 183dae48576f31b4382a82ed8fc8f407
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_29.unity
+    guid: f626cc9527d4f4a48ba704a297ce03bd
+  - enabled: 1
+    path: Assets/Scenes/LevelsTimeMode/Level_30.unity
+    guid: 00584092ee2f4174693f5f1e0f42a4a7
+  - enabled: 1
     path: Assets/Scenes/FinalGame.unity
     guid: 88cc738ab7cd0f644a67d0a16fd74e04
   m_configObjects: {}

@@ -33,8 +33,11 @@ public class GameSystem : MonoBehaviour
     {
 
         if (isProcessCoroutine) return;
-        var globalAudio = AudioSystem.instance.globalAudioClips;
-        AudioSystem.instance.CreateAuido(globalAudio.potClick);
+        if (AudioSystem.instance)
+        {
+            var globalAudio = AudioSystem.instance.globalAudioClips;
+            AudioSystem.instance.CreateAuido(globalAudio.potClick);
+        }
         var selectePot = button as Pot;
         var hasStateBallTop = selectePot.Balls.Any(b => b == ballTop);// если в этой колбе есть выбранный шарик вверху
         if (hasStateBallTop)
@@ -75,8 +78,11 @@ public class GameSystem : MonoBehaviour
     private void SelectBall(Button3D button)
     {
         if (isProcessCoroutine) return;
-        var globalAudio = AudioSystem.instance.globalAudioClips;
-        AudioSystem.instance.CreateAuido(globalAudio.ballClick,0.2f);
+        if (AudioSystem.instance)
+        {
+            var globalAudio = AudioSystem.instance.globalAudioClips;
+            AudioSystem.instance.CreateAuido(globalAudio.ballClick, 0.2f);
+        }
         var ball = button as Ball;
         ballTop = ball;
         if (ball.StateBall == Ball.State.bottom) return;

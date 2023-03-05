@@ -57,35 +57,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ImportAssets\QuickOutline\Scripts\Outline.cs" />
+    <Compile Include="Assets\Scripts\Menu\ShopPanel.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Ball.cs" />
+    <Compile Include="Assets\Scripts\Menu\MenuLibrary.cs" />
+    <Compile Include="Assets\Scripts\Menu\GlobalSkybox.cs" />
     <Compile Include="Assets\Scripts\Menu\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Menu\Window.cs" />
     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Button3D.cs" />
+    <Compile Include="Assets\Scripts\GlobalAudioClips.cs" />
     <Compile Include="Assets\Scripts\Menu\PanelMenu.cs" />
+    <Compile Include="Assets\Scripts\GlobalGameSetting.cs" />
     <Compile Include="Assets\Scripts\GameLogic\PotProperty.cs" />
+    <Compile Include="Assets\Scripts\Menu\ProductShop.cs" />
     <Compile Include="Assets\Scripts\GameLogic\BallCreator.cs" />
+    <Compile Include="Assets\Scripts\FinalScene.cs" />
     <Compile Include="Assets\Scripts\GameLogic\ClickRegister.cs" />
     <Compile Include="Assets\Scripts\GameLogic\PanelResult.cs" />
     <Compile Include="Assets\Scripts\GameLogic\BallProperty.cs" />
     <Compile Include="Assets\Scripts\GameLogic\GameSystem.cs" />
+    <Compile Include="Assets\Scripts\AudioSystem.cs" />
     <Compile Include="Assets\Scripts\Menu\RewardSystem.cs" />
     <Compile Include="Assets\Scripts\GameLogic\GameStarter.cs" />
     <Compile Include="Assets\Scripts\GameLogic\PotCreator.cs" />
     <Compile Include="Assets\Scripts\GameLogic\Pot.cs" />
-    <Compile Include="Assets\Scripts\Menu\FlyTextCreator.cs" />
-    <Compile Include="Assets\Scripts\GameLogic\LevelCondition.cs" />
-    <Compile Include="Assets\Scripts\Menu\MenuLibrary.cs" />
-    <Compile Include="Assets\Scripts\Menu\GlobalSprites.cs" />
-    <Compile Include="Assets\Scripts\Menu\GlobalSkybox.cs" />
-    <Compile Include="Assets\Scripts\Menu\ProductShop.cs" />
-    <Compile Include="Assets\Scripts\Menu\ShopPanel.cs" />
-    <Compile Include="Assets\Scripts\FinalScene.cs" />
-    <Compile Include="Assets\Scripts\GlobalGameSetting.cs" />
     <Compile Include="Assets\Scripts\TutorialSystem.cs" />
-    <Compile Include="Assets\Scripts\AudioSystem.cs" />
-    <Compile Include="Assets\Scripts\Sound.cs" />
-    <Compile Include="Assets\Scripts\GlobalAudioClips.cs" />
+    <Compile Include="Assets\Scripts\Menu\FlyTextCreator.cs" />
+    <Compile Include="Assets\Scripts\Menu\GlobalSprites.cs" />
+    <Compile Include="Assets\Scripts\GameLogic\LevelCondition.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

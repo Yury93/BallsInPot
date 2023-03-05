@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3eb62d892cddcd41835bfd8afeb140b, type: 3}
   m_Name: Ball 5
   m_EditorClassIdentifier: 
-  color: {r: 0, g: 0.9300573, b: 1, a: 0}
+  color: {r: 1, g: 0.06833689, b: 0, a: 0}

@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeMode: 1
-  timer: 60
+  timer: 130
   timerText: {fileID: 1871524887}
   timerPanel: {fileID: 1931127204}
   panelResult: {fileID: 1980094727}

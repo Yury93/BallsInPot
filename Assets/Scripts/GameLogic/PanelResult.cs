@@ -34,9 +34,11 @@ public class PanelResult : MonoBehaviour
         {
             SetActiveRewardButton();
             resultText.text = "¬€ œŒ¡≈ƒ»À»!";
-
-            var globalAudio = AudioSystem.instance.globalAudioClips;
-            AudioSystem.instance.CreateAuido(globalAudio.win);
+            if (AudioSystem.instance)
+            {
+                var globalAudio = AudioSystem.instance.globalAudioClips;
+                AudioSystem.instance.CreateAuido(globalAudio.win);
+            }
         }
         else
         {
@@ -45,8 +47,11 @@ public class PanelResult : MonoBehaviour
             restartButton.gameObject.SetActive(true);
             nextSceneButton.gameObject.SetActive(false);
 
-            var globalAudio = AudioSystem.instance.globalAudioClips;
-            AudioSystem.instance.CreateAuido(globalAudio.los);
+            if (AudioSystem.instance)
+            {
+                var globalAudio = AudioSystem.instance.globalAudioClips;
+                AudioSystem.instance.CreateAuido(globalAudio.los);
+            }
         }
         menuButton.gameObject.SetActive(false);
     }
@@ -67,9 +72,11 @@ public class PanelResult : MonoBehaviour
         }
         reward.SetActive(true);
 
-        var globalAudio = AudioSystem.instance.globalAudioClips;
-        AudioSystem.instance.CreateAuido(globalAudio.addReward);
-
+        if (AudioSystem.instance)
+        {
+            var globalAudio = AudioSystem.instance.globalAudioClips;
+            AudioSystem.instance.CreateAuido(globalAudio.addReward);
+        }
         nextSceneButton.gameObject.SetActive(true);
     }
 
@@ -77,8 +84,10 @@ public class PanelResult : MonoBehaviour
     {
         restartButton.gameObject.SetActive(false);
         rewardAdd.gameObject.SetActive(true);
-
-        var globalAudio = AudioSystem.instance.globalAudioClips;
-        AudioSystem.instance.CreateAuido(globalAudio.buttonClick);
+        if (AudioSystem.instance)
+        {
+            var globalAudio = AudioSystem.instance.globalAudioClips;
+            AudioSystem.instance.CreateAuido(globalAudio.buttonClick);
+        }
     }
 }
