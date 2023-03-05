@@ -9,31 +9,52 @@ public class PanelResult : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI resultText,countRewardText;
     [SerializeField] private GameObject reward;
-    [SerializeField] private Button restartButton, nextSceneButton,menuButton;
+    [SerializeField] private Button restartButton, nextSceneButton,menuButton,rewardAdd;
     [SerializeField] private RewardSystem rewardSystem;
     List<Pot> pots;
     public void Init(List<Pot> pots)
     {
         restartButton.onClick.AddListener(() => SceneLoader.RestartScene());
         nextSceneButton.onClick.AddListener(() => SceneLoader.LoadNextScene());
+        rewardAdd.gameObject.SetActive(false);
+        rewardAdd.onClick.AddListener(AddRewards);
         rewardSystem.Init();
         this.pots = pots;
+        nextSceneButton.gameObject.SetActive(false);
     }
     internal void Open(bool result)
     {
         gameObject.SetActive(true);
         if (result)
         {
-            var count = rewardSystem.GetGold.AddReward(pots);
-            countRewardText.text = "+"+count.ToString();
+            SetActiveRewardButton();
             resultText.text = "¬€ œŒ¡≈ƒ»À»!";
-            reward.SetActive(true);
+           
         }
         else
         {
             resultText.text = "¬€ œ–Œ»√–¿À»!";
             reward.SetActive(false);
+            restartButton.gameObject.SetActive(true);
+            nextSceneButton.gameObject.SetActive(false);
         }
         menuButton.gameObject.SetActive(false);
+    }
+
+    private void AddRewards()
+    {
+        rewardAdd.gameObject.SetActive(false);
+        var count = rewardSystem.GetGold.AddReward(pots);
+        reward.SetActive(true);
+        countRewardText.text = "+" + count.ToString();
+
+
+        nextSceneButton.gameObject.SetActive(true);
+    }
+
+    private void SetActiveRewardButton()
+    {
+        restartButton.gameObject.SetActive(false);
+        rewardAdd.gameObject.SetActive(true);
     }
 }

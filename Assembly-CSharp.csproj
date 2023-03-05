@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Window.cs" />
     <Compile Include="Assets\Scripts\RewardSystem.cs" />
     <Compile Include="Assets\Scripts\PanelMenu.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
