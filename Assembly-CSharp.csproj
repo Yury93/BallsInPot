@@ -83,6 +83,9 @@
     <Compile Include="Assets\Scripts\FinalScene.cs" />
     <Compile Include="Assets\Scripts\GlobalGameSetting.cs" />
     <Compile Include="Assets\Scripts\TutorialSystem.cs" />
+    <Compile Include="Assets\Scripts\AudioSystem.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
+    <Compile Include="Assets\Scripts\GlobalAudioClips.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

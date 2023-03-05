@@ -24,6 +24,7 @@ public class LevelCondition : MonoBehaviour
         timerPanel.gameObject.SetActive(false);
         if (timeMode)
         {
+            Time.timeScale = 1;
             timerText.gameObject.SetActive(true);
             timerPanel.gameObject.SetActive(true);
             coroutine = StartCoroutine(CorTimer(timer));

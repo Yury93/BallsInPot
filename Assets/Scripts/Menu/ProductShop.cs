@@ -37,7 +37,6 @@ public class ProductShop : MonoBehaviour
 
     public void SelectProductShop()
     {
-        Debug.Log(Load() + " /" + id);
         if (RewardSystem.instance.GetGold.Count >= price && Load() != id && isHasProduct == false)
         {
             isHasProduct = true;

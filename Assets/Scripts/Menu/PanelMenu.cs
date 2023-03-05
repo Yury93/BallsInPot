@@ -24,6 +24,9 @@ public class PanelMenu : Window
         Time.timeScale = 0.00001f;
         RewardSystem.instance.GetGold.LoadCount();
         countResource.text = RewardSystem.instance.GetGold.Count.ToString() + " золота" ;
+
+        var globalAudio = AudioSystem.instance.globalAudioClips;
+        AudioSystem.instance.CreateAuido(globalAudio.buttonClick);
     }
     public override void Close()
     {
@@ -37,6 +40,9 @@ public class PanelMenu : Window
             }
         }
         Time.timeScale = 1f;
+
+        var globalAudio = AudioSystem.instance.globalAudioClips;
+        AudioSystem.instance.CreateAuido(globalAudio.buttonClick);
     }
     public void LoadSceneMenu()
     {

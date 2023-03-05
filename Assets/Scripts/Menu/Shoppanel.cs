@@ -8,6 +8,12 @@ public class ShopPanel : Window
 {
     [SerializeField] private List<ProductShop> products;
     [SerializeField] private Menu menu;
+    public override void Open()
+    {
+        base.Open();
+        var globalAudio = AudioSystem.instance.globalAudioClips;
+        AudioSystem.instance.CreateAuido(globalAudio.buttonClick);
+            }
     public void Init()
     {
         products.ForEach(p => p.Init());
@@ -19,6 +25,9 @@ public class ShopPanel : Window
 
     private void SelectProduct(int idProduct)
     {
+        var globalAudio = AudioSystem.instance.globalAudioClips;
+        AudioSystem.instance.CreateAuido(globalAudio.buttonClick);
+
         products.ForEach(p => p.DeselectProduct());
         var selectedProduct = products.First(p => p.Id == idProduct);
         if (selectedProduct.isHasProduct)
@@ -36,5 +45,11 @@ public class ShopPanel : Window
         }
         menu.RefreshResourceInfo();
       
+    }
+    public override void Close()
+    {
+        base.Close();
+        var globalAudio = AudioSystem.instance.globalAudioClips;
+        AudioSystem.instance.CreateAuido(globalAudio.buttonClick);
     }
 }

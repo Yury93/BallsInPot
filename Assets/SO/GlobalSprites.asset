@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: GlobalSprites
   m_EditorClassIdentifier: 
   spriteGold: {fileID: 21300000, guid: c08e5ca35e5edc54493663f56c01f0a4, type: 3}
+  soundOn: {fileID: 21300000, guid: 7f6e8e80c6e129841805390a646fa334, type: 3}
+  soundOff: {fileID: 21300000, guid: 64228fd48bd1df14b9a46844eac2e780, type: 3}

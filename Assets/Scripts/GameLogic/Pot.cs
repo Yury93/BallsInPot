@@ -9,6 +9,7 @@ public class Pot : Button3D
     [SerializeField] private List<Ball> balls;
     [SerializeField] private Transform bottom,top;
     [SerializeField] private Outline outline;
+    public Color selectedColor, defaultColor;
     public Outline Outline => outline;
     public BallCreator BallCreator { get; private set; }
     public Transform Top => top;

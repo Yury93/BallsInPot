@@ -31,7 +31,10 @@ public class GameSystem : MonoBehaviour
 
     private void SelectPot(Button3D button)
     {
+
         if (isProcessCoroutine) return;
+        var globalAudio = AudioSystem.instance.globalAudioClips;
+        AudioSystem.instance.CreateAuido(globalAudio.potClick);
         var selectePot = button as Pot;
         var hasStateBallTop = selectePot.Balls.Any(b => b == ballTop);// если в этой колбе есть выбранный шарик вверху
         if (hasStateBallTop)
@@ -72,6 +75,8 @@ public class GameSystem : MonoBehaviour
     private void SelectBall(Button3D button)
     {
         if (isProcessCoroutine) return;
+        var globalAudio = AudioSystem.instance.globalAudioClips;
+        AudioSystem.instance.CreateAuido(globalAudio.ballClick,0.2f);
         var ball = button as Ball;
         ballTop = ball;
         if (ball.StateBall == Ball.State.bottom) return;
@@ -99,9 +104,18 @@ public class GameSystem : MonoBehaviour
 
     private void ShowOutlinePots(bool result)
     {
+        
         foreach (var pot in Pots)
         {
-            pot.Outline.enabled = result;
+            //pot.Outline.enabled = result;
+            if(result == true)
+            {
+                pot.Outline.OutlineColor = pot.selectedColor;
+            }
+            else
+            {
+                pot.Outline.OutlineColor = pot.defaultColor;
+            }
             
         }
    

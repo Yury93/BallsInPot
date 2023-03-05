@@ -24,12 +24,19 @@ public class PanelResult : MonoBehaviour
     }
     internal void Open(bool result)
     {
+        foreach (var item in pots)
+        {
+            item.BlockClick(true);
+            item.Balls.ForEach(b => b.BlockClick(true));
+        }
         gameObject.SetActive(true);
         if (result)
         {
             SetActiveRewardButton();
             resultText.text = "¬€ œŒ¡≈ƒ»À»!";
-           
+
+            var globalAudio = AudioSystem.instance.globalAudioClips;
+            AudioSystem.instance.CreateAuido(globalAudio.win);
         }
         else
         {
@@ -37,6 +44,9 @@ public class PanelResult : MonoBehaviour
             reward.SetActive(false);
             restartButton.gameObject.SetActive(true);
             nextSceneButton.gameObject.SetActive(false);
+
+            var globalAudio = AudioSystem.instance.globalAudioClips;
+            AudioSystem.instance.CreateAuido(globalAudio.los);
         }
         menuButton.gameObject.SetActive(false);
     }
@@ -56,8 +66,9 @@ public class PanelResult : MonoBehaviour
             countRewardText.text = "+" + count.ToString();
         }
         reward.SetActive(true);
-        
 
+        var globalAudio = AudioSystem.instance.globalAudioClips;
+        AudioSystem.instance.CreateAuido(globalAudio.addReward);
 
         nextSceneButton.gameObject.SetActive(true);
     }
@@ -66,5 +77,8 @@ public class PanelResult : MonoBehaviour
     {
         restartButton.gameObject.SetActive(false);
         rewardAdd.gameObject.SetActive(true);
+
+        var globalAudio = AudioSystem.instance.globalAudioClips;
+        AudioSystem.instance.CreateAuido(globalAudio.buttonClick);
     }
 }
