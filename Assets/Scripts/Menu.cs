@@ -13,7 +13,7 @@ public class Menu : MonoBehaviour
     {
         rewardSystem.Init();
         rewardSystem.GetGold.LoadCount();
-        countResource.text = rewardSystem.GetGold.Count.ToString();
+        countResource.text = rewardSystem.GetGold.Count.ToString() + " золота";
         startButton.onClick.AddListener(SceneLoadScene);
     }
     public void SceneLoadScene()

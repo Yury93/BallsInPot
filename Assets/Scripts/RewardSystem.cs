@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class RewardSystem : MonoBehaviour
 {
+    [SerializeField] private Image imageGold;
     public class Gold
         {
         private int count;
@@ -31,6 +32,7 @@ public class RewardSystem : MonoBehaviour
     public void Init()
     {
         GetGold = new Gold();
+        imageGold.sprite = MenuLibrary.instance.GlobalSprites.spriteGold;
         GetGold.LoadCount();
         if(instance == null)
         {

@@ -56,25 +56,29 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Ball.cs" />
-    <Compile Include="Assets\Scripts\Button3D.cs" />
-    <Compile Include="Assets\Scripts\BallCreator.cs" />
-    <Compile Include="Assets\Scripts\ClickRegister.cs" />
-    <Compile Include="Assets\Scripts\GameSystem.cs" />
-    <Compile Include="Assets\Scripts\GameStarter.cs" />
-    <Compile Include="Assets\Scripts\Pot.cs" />
-    <Compile Include="Assets\Scripts\PotProperty.cs" />
-    <Compile Include="Assets\Scripts\PotCreator.cs" />
-    <Compile Include="Assets\Scripts\BallProperty.cs" />
-    <Compile Include="Assets\Scripts\FlyTextCreator.cs" />
     <Compile Include="Assets\ImportAssets\QuickOutline\Scripts\Outline.cs" />
-    <Compile Include="Assets\Scripts\LevelCondition.cs" />
-    <Compile Include="Assets\Scripts\PanelResult.cs" />
+    <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Window.cs" />
-    <Compile Include="Assets\Scripts\RewardSystem.cs" />
-    <Compile Include="Assets\Scripts\PanelMenu.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\Button3D.cs" />
+    <Compile Include="Assets\Scripts\PanelMenu.cs" />
+    <Compile Include="Assets\Scripts\PotProperty.cs" />
+    <Compile Include="Assets\Scripts\BallCreator.cs" />
+    <Compile Include="Assets\Scripts\ClickRegister.cs" />
+    <Compile Include="Assets\Scripts\PanelResult.cs" />
+    <Compile Include="Assets\Scripts\BallProperty.cs" />
+    <Compile Include="Assets\Scripts\GameSystem.cs" />
+    <Compile Include="Assets\Scripts\RewardSystem.cs" />
+    <Compile Include="Assets\Scripts\GameStarter.cs" />
+    <Compile Include="Assets\Scripts\PotCreator.cs" />
+    <Compile Include="Assets\Scripts\Pot.cs" />
+    <Compile Include="Assets\Scripts\FlyTextCreator.cs" />
+    <Compile Include="Assets\Scripts\LevelCondition.cs" />
+    <Compile Include="Assets\Scripts\MenuLibrary.cs" />
+    <Compile Include="Assets\Scripts\GlobalSprites.cs" />
+    <Compile Include="Assets\Scripts\GlobalSkybox.cs" />
+    <Compile Include="Assets\Scripts\ProductShop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

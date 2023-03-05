@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeMode: 1
-  timer: 5
+  timer: 60
   timerText: {fileID: 1871524887}
   panelResult: {fileID: 1980094727}
 --- !u!1 &63995246
@@ -3538,3 +3538,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9849481733b9d4647930c113241daa38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageGold: {fileID: 916419443}
