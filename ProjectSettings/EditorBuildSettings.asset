@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 2880f5a745952514e8715814f1bfcb11
   - enabled: 1
-    path: Assets/Scenes/Level_1.unity
+    path: Assets/Scenes/LevelsTimeMode/Level_1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/FinalGame.unity
+    guid: 88cc738ab7cd0f644a67d0a16fd74e04
   m_configObjects: {}

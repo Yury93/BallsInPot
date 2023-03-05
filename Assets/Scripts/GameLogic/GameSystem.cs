@@ -7,6 +7,7 @@ using UnityEngine;
 public class GameSystem : MonoBehaviour
 {
     [SerializeField] private LevelCondition levelCondition;
+    public LevelCondition LevelCondition => levelCondition;
     private List<Ball> balls;
     public List<Pot> Pots { get; private set; }
 

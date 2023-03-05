@@ -12,6 +12,7 @@ public class GlobalSkybox : ScriptableObject
         [SerializeField] public int id;
         [SerializeField] public Material skybox;
         [SerializeField]public bool isHasProduct;//опхнаперемн
+        [SerializeField] public bool activeSkybox;
     }
     [SerializeField] public List<ProductSkybox> products;
     [SerializeField] public Material defaultSkybox;

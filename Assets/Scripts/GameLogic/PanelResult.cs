@@ -43,10 +43,20 @@ public class PanelResult : MonoBehaviour
 
     private void AddRewards()
     {
+       
         rewardAdd.gameObject.SetActive(false);
-        var count = rewardSystem.GetGold.AddReward(pots);
+        if (GameStarter.instance.GameSystem.LevelCondition.TimeMode)
+        {
+            var count = rewardSystem.GetGold.AddReward(pots);
+            countRewardText.text = "+" + count.ToString();
+        }
+        else
+        {
+            var count = rewardSystem.GetGold.AddOneReward();
+            countRewardText.text = "+" + count.ToString();
+        }
         reward.SetActive(true);
-        countRewardText.text = "+" + count.ToString();
+        
 
 
         nextSceneButton.gameObject.SetActive(true);

@@ -10,15 +10,22 @@ public class LevelCondition : MonoBehaviour
     [SerializeField] private bool timeMode;
     [SerializeField] private int timer;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private GameObject timerPanel;
     [SerializeField] private PanelResult panelResult;
+    [SerializeField] private TextMeshProUGUI helloText;
+    [SerializeField] private GlobalGameSetting globalGameSetting;
     private List<Pot> pots;
     private Coroutine coroutine;
+    public bool TimeMode => timeMode;
     public void Init(List<Pot> pots)
     {
+        timeMode = globalGameSetting.TimeMode;
         this.pots = pots;
-        if(timeMode)
+        timerPanel.gameObject.SetActive(false);
+        if (timeMode)
         {
             timerText.gameObject.SetActive(true);
+            timerPanel.gameObject.SetActive(true);
             coroutine = StartCoroutine(CorTimer(timer));
         }
         panelResult.Init(pots);

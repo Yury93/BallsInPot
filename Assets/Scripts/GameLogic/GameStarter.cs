@@ -11,14 +11,19 @@ public class GameStarter : MonoBehaviour
     [SerializeField] private Transform contentPot;
     [SerializeField] private List<BallProperty> ballProperties;//их количество должно быть одинаково с количеством pots
     [SerializeField] private FlyTextCreator textCreator;
+    [SerializeField] private GlobalSkybox globalSkybox;
     public Pot potPrefab;
     public int countPot;
     public PotProperty potProperty;
     public float interval;
+    public GameSystem GameSystem => gameSystem;
+
+    public static GameStarter instance;
     //количество проперти зависит от количества потов
     //после того как определённый цвет превысил лимит одного из пота удалять из списка проперти и назначать опять рандом
     void Start()
     {
+        instance = this;
         textCreator.Init();
         clickRegister.Init();
         PotCreator potCreator = new PotCreator(potPrefab, countPot, contentPot);
@@ -27,6 +32,7 @@ public class GameStarter : MonoBehaviour
 
         SetupBallColors();
         gameSystem.Init(pots);
+        RenderSettings.skybox = globalSkybox.ActiveSkybox;
         Debug.Log("Start game");
     }
 

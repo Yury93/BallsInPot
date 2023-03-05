@@ -7,7 +7,8 @@ using UnityEngine;
 public class ShopPanel : Window
 {
     [SerializeField] private List<ProductShop> products;
-    private void Start()//перенести в инит
+    [SerializeField] private Menu menu;
+    public void Init()
     {
         products.ForEach(p => p.Init());
         products.ForEach(p => p.DeselectProduct());
@@ -26,11 +27,14 @@ public class ShopPanel : Window
         }
         else
         {
+            
             selectedProduct.SelectProductShop();
             var activeProduct = products.FirstOrDefault(p => p.Id == PlayerPrefs.GetInt(p.activeProductPlayerPrefs));
             if (activeProduct) activeProduct.SelectProductShop();
 
             
         }
+        menu.RefreshResourceInfo();
+      
     }
 }

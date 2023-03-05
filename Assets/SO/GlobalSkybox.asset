@@ -12,6 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 998e649b77d4b45499e32968a1b8a3f2, type: 3}
   m_Name: GlobalSkybox
   m_EditorClassIdentifier: 
-  skybox1: {fileID: 0}
-  skybox2: {fileID: 0}
-  skybox3: {fileID: 0}
+  products:
+  - id: 0
+    skybox: {fileID: 2100000, guid: 94caf2ba4ca5e46bfaba53afcc8778dd, type: 2}
+    isHasProduct: 1
+  - id: 1
+    skybox: {fileID: 2100000, guid: 9a819b815e161b64e8c78164c1902994, type: 2}
+    isHasProduct: 1
+  - id: 2
+    skybox: {fileID: 2100000, guid: 777ab6f8a28814b4f8743f807c086e4d, type: 2}
+    isHasProduct: 0
+  - id: 3
+    skybox: {fileID: 2100000, guid: 2b44fec75f1c98043beb67b0b23759aa, type: 2}
+    isHasProduct: 1
+  defaultSkybox: {fileID: 2100000, guid: 49b5198e7bd4823488f542bb9651a02e, type: 2}
+  ActiveSkybox: {fileID: 2100000, guid: 94caf2ba4ca5e46bfaba53afcc8778dd, type: 2}

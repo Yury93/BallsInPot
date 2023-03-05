@@ -21,17 +21,36 @@ public class RewardSystem : MonoBehaviour
         }
         public int AddReward(List<Pot> pots)
         {
+            
             int reward = pots.Count;
             count += reward;
             SaveCount();
             return reward;
         }
+        public int AddOneReward()
+        {
+            count += 1;
+            SaveCount();
+            return 1;
+        }
+        public void TakeResource(int price)
+        {
+            count -= price;
+            SaveCount();
+        }
+        public void AddGold()
+        {
+            count += 10;
+            SaveCount();
+        }
+
     }
     public Gold GetGold { get; private set; }
     public static RewardSystem instance;
     public void Init()
     {
         GetGold = new Gold();
+        if(MenuLibrary.instance)
         imageGold.sprite = MenuLibrary.instance.GlobalSprites.spriteGold;
         GetGold.LoadCount();
         if(instance == null)
@@ -39,6 +58,10 @@ public class RewardSystem : MonoBehaviour
             instance = this;
         }
     }
+    [ContextMenu("днаюбхрэ гнкнрю")]
 
-
+    public void Context_AddGold()
+    {
+        GetGold.AddGold();
+    }
 }
