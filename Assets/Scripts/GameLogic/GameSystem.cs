@@ -132,7 +132,7 @@ public class GameSystem : MonoBehaviour
         isProcessCoroutine = true;
         while(ball.transform.position != newPosition)
         {
-            ball.transform.position = Vector3.MoveTowards(ball.transform.position, newPosition,0.09f);
+            ball.transform.position = Vector3.MoveTowards(ball.transform.position, newPosition,0.3f);
             yield return null;
         }
         isProcessCoroutine = false;
@@ -144,7 +144,7 @@ public class GameSystem : MonoBehaviour
         ball.SetState(Ball.State.bottom);
         while (ball.transform.position != potNewOwner.Top.position)
         {
-            ball.transform.position = Vector3.MoveTowards(ball.transform.position, potNewOwner.Top.position, 0.1f);
+            ball.transform.position = Vector3.MoveTowards(ball.transform.position, potNewOwner.Top.position, 0.3f);
             yield return null;
         }
         potNewOwner.Balls.Add(ball);
@@ -158,7 +158,7 @@ public class GameSystem : MonoBehaviour
 
         while (ball.transform.position != newPosition)
         {
-            ball.transform.position = Vector3.MoveTowards(ball.transform.position, newPosition, 0.09f);
+            ball.transform.position = Vector3.MoveTowards(ball.transform.position, newPosition, 0.3f);
             yield return null;
         }
         ball.transform.SetParent(potNewOwner.Bottom);

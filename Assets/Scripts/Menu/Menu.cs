@@ -19,6 +19,11 @@ public class Menu : MonoBehaviour
         startButton.onClick.AddListener(SceneLoadScene);
         shopPanel.Init();
         startNoTime.onClick.AddListener(LoadClassic);
+        //if (AudioSystem.instance &&  AudioSystem.isPlayAudio)
+        //    AudioSystem.instance.SetActiveSounds();
+
+        //YandexSDK.ShowAdv();
+        
     }
     public void SceneLoadScene()
     {

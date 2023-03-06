@@ -13,7 +13,7 @@ public class AudioSystem : MonoBehaviour
     [SerializeField] private Button buttonAudio;
     [SerializeField] private Sound background;
     static List<Sound> sounds;
-    private static bool isPlayAudio = true;
+    public static bool isPlayAudio = true;
     private IEnumerator Start()
     {
         sounds = new List<Sound>();
@@ -40,8 +40,11 @@ public class AudioSystem : MonoBehaviour
             GetComponent<AudioSource>().enabled = false;
             buttonAudio.image.sprite = MenuLibrary.instance.GlobalSprites.soundOff;
         }
-        //buttonAudio.onClick.AddListener(SetActiveSounds);
-        
+        buttonAudio.onClick.AddListener(SetActiveSounds);
+        //if (isPlayAudio)
+        //    SetActiveSounds();
+    
+
     }
 
     public void SetActiveSounds()

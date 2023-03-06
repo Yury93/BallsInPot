@@ -38,7 +38,10 @@ public class PanelResult : MonoBehaviour
             {
                 var globalAudio = AudioSystem.instance.globalAudioClips;
                 AudioSystem.instance.CreateAuido(globalAudio.win);
+                //if (AudioSystem.isPlayAudio)
+                //    AudioSystem.instance.SetActiveSounds();
             }
+
         }
         else
         {
@@ -51,6 +54,10 @@ public class PanelResult : MonoBehaviour
             {
                 var globalAudio = AudioSystem.instance.globalAudioClips;
                 AudioSystem.instance.CreateAuido(globalAudio.los);
+                //    if (AudioSystem.isPlayAudio)
+                //        AudioSystem.instance.SetActiveSounds();
+                //}
+
             }
         }
         menuButton.gameObject.SetActive(false);
@@ -71,7 +78,9 @@ public class PanelResult : MonoBehaviour
             countRewardText.text = "+" + count.ToString();
         }
         reward.SetActive(true);
-
+        //if (AudioSystem.isPlayAudio)
+        //    AudioSystem.instance.SetActiveSounds();
+       
         if (AudioSystem.instance)
         {
             var globalAudio = AudioSystem.instance.globalAudioClips;
