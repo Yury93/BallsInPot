@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,12 @@ public class PanelResult : MonoBehaviour
     [SerializeField] private Button restartButton, nextSceneButton,menuButton,rewardAdd;
     [SerializeField] private RewardSystem rewardSystem;
     List<Pot> pots;
+    bool isPauseAudio;
+
+    [DllImport("__Internal")]
+    private static extern void ShowAdv();
+   
+
     public void Init(List<Pot> pots)
     {
         restartButton.onClick.AddListener(() => SceneLoader.RestartScene());
@@ -59,6 +66,12 @@ public class PanelResult : MonoBehaviour
                 //}
 
             }
+            if (AudioSystem.isPlayAudio)
+            {
+                AudioSystem.instance.SetActiveSounds();
+                ShowAdvBetweenScenes();
+                isPauseAudio = true;
+            }
         }
         menuButton.gameObject.SetActive(false);
     }
@@ -98,5 +111,23 @@ public class PanelResult : MonoBehaviour
             var globalAudio = AudioSystem.instance.globalAudioClips;
             AudioSystem.instance.CreateAuido(globalAudio.buttonClick);
         }
+    }
+
+
+
+
+
+    ///–≈ À¿Ã¿
+    public void CloseAdvBetweenScenes()
+    {
+        if (isPauseAudio)
+        {
+            AudioSystem.instance.SetActiveSounds();
+            ShowAdvBetweenScenes();
+        }
+    }
+    public static void ShowAdvBetweenScenes()
+    {
+        ShowAdv();
     }
 }

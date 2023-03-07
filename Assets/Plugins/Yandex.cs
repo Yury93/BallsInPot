@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -16,8 +17,19 @@ public class Yandex : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void GiveMeUserInfo();
 
+    //[DllImport("__Internal")]
+    //private static extern void ShowAdv();
+    //public Action OnCloseAdv;
 
-   
+    //[DllImport("__Internal")]
+    //private static extern void RateGame();
+
+
+    private IEnumerator Start()
+    {
+        yield return new WaitForSeconds(0.3f);
+        HelloButton();
+    }
 
     public void SetName(string name)
     {
@@ -30,6 +42,7 @@ public class Yandex : MonoBehaviour
         StartCoroutine(DownloadImage(url));
         Debug.Log("получено фото пользователя");
     }
+    
     IEnumerator DownloadImage(string mediaUrl)
     {
         UnityWebRequest request = UnityWebRequestTexture.GetTexture(mediaUrl);
@@ -38,12 +51,24 @@ public class Yandex : MonoBehaviour
             Debug.Log(request.error);
         else
             userPhoto.texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
+
+        yield return new WaitForEndOfFrame();
+
     }
+
+    //public void CloseAdvBetweenScenes()
+    //{
+    //    OnCloseAdv?.Invoke();
+    //}
+    //public static void ShowAdvBetweenScenes()
+    //{
+    //    ShowAdv();
+    //}
 
     // Update is called once per frame
     public void HelloButton()
     {
-        Hello();
-        GiveMeUserInfo();
+        //Hello();//приветствие
+        //GiveMeUserInfo();//авторизация
     }
 }

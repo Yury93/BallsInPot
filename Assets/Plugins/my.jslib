@@ -8,12 +8,27 @@ mergeInto(LibraryManager.library, {
    GiveMeUserInfo: function () {
 
  myGameInstance.SendMessage('Yandex', 'SetName', player.getName());
- 
+
     myGameInstance.SendMessage('Yandex', 'SetPhoto', player.getPhoto("medium"));
 
     window.alert(player.getName()); 
     console.log(player.getPhoto("medium"));
   
+  },
+
+     ShowAdv: function () {
+    ysdk.adv.showFullscreenAdv({
+    callbacks: {
+        onClose: function(wasShown) {
+          // some action after close
+          console.log("-----SHOW ADV------")
+          myGameInstance.SendMessage('PanelResult', 'CloseAdvBetweenScenes')
+        },
+        onError: function(error) {
+          // some action on error
+        }
+    }
+})
   },
 
 });
